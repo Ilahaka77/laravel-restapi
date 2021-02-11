@@ -28,4 +28,10 @@ class PostController extends Controller
         Post::create($data);
         return response()->json('success', 201);
     }
+
+    public function update(Request $request, Post $post)
+    {
+        $post->update($request->all());
+        return response()->json($post, 200);
+    }
 }
