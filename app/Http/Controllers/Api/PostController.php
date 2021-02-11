@@ -21,4 +21,11 @@ class PostController extends Controller
 
         return response()->json($data, 200);
     }
+
+    public function store(Request $request)
+    {
+        $data = $request->all();
+        Post::create($data);
+        return response()->json('success', 201);
+    }
 }
