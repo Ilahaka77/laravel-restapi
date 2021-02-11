@@ -22,3 +22,4 @@ Route::get('/post', 'Api\PostController@index');
 Route::get('/post/{id}', 'Api\PostController@show');
 Route::post('/post', 'Api\PostController@store');
 Route::put('/post/{post}', 'Api\PostController@update');
+Route::delete('/post/{post}', 'Api\PostController@destroy');
